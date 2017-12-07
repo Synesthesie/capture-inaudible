@@ -74,7 +74,7 @@ osc.oscillator.type = 'sine';
 var wave = 'sine';
 
 function upload(input, destPath) {
-    const uploadDirPath = 'test-inaudible/';
+    const uploadDirPath = 'capture-inaudible/';
     const isUsingCompression = false;
     const date = new Date();
     const prep = (d) => {
