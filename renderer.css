@@ -1,0 +1,544 @@
+@font-face {
+  font-family: 'AkzidenzGroteskBQ-Reg';
+  src: url('vendor/fonts/AkzidenzGroteskBQ-Reg.eot?#iefix') format('embedded-opentype'),  url('vendor/fonts/AkzidenzGroteskBQ-Reg.otf')  format('opentype'),
+	     url('vendor/fonts/AkzidenzGroteskBQ-Reg.woff') format('woff'), url('vendor/fonts/AkzidenzGroteskBQ-Reg.ttf')  format('truetype'), url('vendor/fonts/AkzidenzGroteskBQ-Reg.svg#AkzidenzGroteskBQ-Reg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    font-family: 'AkzidenzGroteskBQ-Reg';
+    font-weight: normal;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+    user-select: none;
+}
+
+.button {
+    cursor: pointer;
+}
+svg.button {
+    width: 15px;
+    height: 15px;
+    stroke: none;
+    fill: #000;
+}
+.button:hover {
+    fill: #ff0000;
+    color: #ff0000;
+}
+.button.active {
+    fill: #ff0000;
+    color: #ff0000;
+}
+.button circle {
+    cx: 8;
+    cy: 8;
+    r: 6.2px;
+}
+
+/* --- Debug --- */
+/* .debug-bg { */
+/*     width: 722px; */
+/*     height: 400px; */
+/*     position: absolute; */
+/*     top: 0; */
+/*     left: 0; */
+/*     background: url('dev/interface-bg/ms05_00.svg') no-repeat top left; */
+/*     opacity: 0.2; */
+/* } */
+/* ------------- */
+
+.landing {
+    width: 722px;
+    height: 400px;
+    text-transform: uppercase;
+    background: #fff;
+    font-size: 32.61px;
+    position: absolute;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+.main {
+    font-size: 17.313px;
+    text-transform: uppercase;
+    cursor: default;
+}
+
+.exit {
+    width: 722px;
+    height: 400px;
+    background: #fff;
+    position: absolute;
+    display: none;
+    cursor: default;
+}
+
+.landing-la-capture {
+    position: absolute;
+    top: 2px;
+    left: 8px;
+}
+.landing-la-capture .b {
+    position: relative;
+    left: -7.5px;
+}
+.landing-la-capture .c {
+    position: relative;
+    left: -7.5px;
+}
+.landing-la-capture .d {
+    position: relative;
+    left: -16.5px;
+}
+
+.landing-de-linaudible {
+    position: absolute;
+    top: 34px;
+    left: 7px;
+}
+.landing-de-linaudible .b {
+    position: relative;
+    left: -8.6px;
+}
+
+.landing-matthieu {
+    position: absolute;
+    top: 2px;
+    left: 313px;
+}
+.landing-matthieu .b {
+    position: relative;
+    left: -7.3px;
+}
+
+
+.landing-saladin {
+    position: absolute;
+    top: 34px;
+    left: 313px;
+}
+.landing-saladin .b {
+    position: relative;
+    left: -6.9px;
+}
+
+.landing-aka {
+    position: absolute;
+    top: 358px;
+    left: 313px;
+}
+.landing-aka .b {
+    position: relative;
+    left: -10.6px;
+}
+
+.main-separator {
+    position: absolute;
+    left: 10px;
+    width: 702px;
+    height: 1px;
+    background: #000;
+}
+
+.main-capture-inaudible {
+    position: absolute;
+    top: 6px;
+    left: 9px;
+}
+.main-capture-inaudible .b {
+    position: relative;
+    left: -6.5px;
+}
+
+.main-matthieu {
+    position: absolute;
+    top: 6px;
+    left: 312px;
+}
+.main-matthieu .a {
+    letter-spacing: -5.1px;
+}
+.main-matthieu .b {
+    letter-spacing: -6px;
+}
+.main-matthieu .c {
+    letter-spacing: -4px;
+}
+.main-matthieu .d {
+    letter-spacing: -4.5px;
+}
+.main-matthieu .e {
+    letter-spacing: -4.8px;
+}
+.main-matthieu .f {
+    letter-spacing: -5px;
+}
+.main-matthieu .g {
+    letter-spacing: -5.1px;
+}
+.main-matthieu .h {
+    letter-spacing: 0px;
+}
+
+.main-saladin {
+    position: absolute;
+    top: 6px;
+    left: 398.3px;
+}
+.main-saladin .a {
+    letter-spacing: -2.5px;
+}
+.main-saladin .b {
+    letter-spacing: -1.9px;
+}
+.main-saladin .c {
+    letter-spacing: -2px;
+}
+.main-saladin .d {
+    letter-spacing: -2.3px;
+}
+.main-saladin .e {
+    letter-spacing: -2.4px;
+}
+.main-saladin .f {
+    letter-spacing: -2.2px;
+}
+.main-saladin .g {
+    letter-spacing: 0px;
+}
+
+.main-aka {
+    position: absolute;
+    top: 6px;
+    left: 646px;
+}
+
+.main-select-wav-aiff-button {
+    position: absolute;
+    top: 59px;
+    left: 8px;
+}
+
+.main-select-wav-aiff {
+    position: absolute;
+    top: 57px;
+    left: 41px;
+}
+
+.main-microphone-button {
+    position: absolute;
+    top: 76px;
+    left: 8px;
+}
+
+.main-microphone {
+    position: absolute;
+    top: 74px;
+    left: 41px;
+}
+.main-microphone .please-wait {
+    color: #ff0000;
+    display: none;
+}
+
+.main-add-file-archive-button {
+    position: absolute;
+    top: 93px;
+    left: 8px;
+}
+
+.main-add-file-archive {
+    position: absolute;
+    top: 91px;
+    left: 41px;
+}
+
+.main-channel-mode {
+    position: absolute;
+    top: 123px;
+    left: 10px;
+}
+
+.main-stereo-button {
+    position: absolute;
+    top: 142px;
+    left: 8px;
+}
+
+.main-stereo {
+    position: absolute;
+    top: 140px;
+    left: 41px;
+}
+
+.main-mono-button {
+    position: absolute;
+    top: 159px;
+    left: 8px;
+}
+
+.main-mono {
+    position: absolute;
+    top: 157px;
+    left: 41px;
+}
+.main-mono .a {
+    letter-spacing: -3.5px;
+}
+.main-mono .b {
+    letter-spacing: -4.4px;
+}
+.main-mono .c {
+    letter-spacing: -4.2px;
+}
+
+.main-algorithm {
+    position: absolute;
+    top: 190px;
+    left: 9px;
+}
+
+.main-vbr {
+    position: absolute;
+    top: 207px;
+    left: 9px;
+}
+
+.main-variable-bitrate {
+    position: absolute;
+    top: 207px;
+    left: 62px;
+}
+
+.main-vbr-0 {
+    position: absolute;
+    top: 207px;
+    left: 248px;
+}
+
+.main-vbr-1 {
+    position: absolute;
+    top: 207px;
+    left: 293px;
+}
+
+.main-vbr-2 {
+    position: absolute;
+    top: 207px;
+    left: 336px;
+}
+
+.main-vbr-3 {
+    position: absolute;
+    top: 207px;
+    left: 387px;
+}
+
+.main-vbr-4 {
+    position: absolute;
+    top: 207px;
+    left: 442px;
+}
+
+.main-vbr-5 {
+    position: absolute;
+    top: 207px;
+    left: 496px;
+}
+
+.main-vbr-6 {
+    position: absolute;
+    top: 207px;
+    left: 547px;
+}
+
+.main-vbr-7 {
+    position: absolute;
+    top: 207px;
+    left: 596px;
+}
+
+.main-vbr-8 {
+    position: absolute;
+    top: 207px;
+    left: 646px;
+}
+
+.main-vbr-9 {
+    position: absolute;
+    top: 207px;
+    left: 699px;
+}
+
+.main-abr {
+    position: absolute;
+    top: 223px;
+    left: 9px;
+}
+
+.main-average-bitrate {
+    position: absolute;
+    top: 223px;
+    left: 62px;
+}
+
+.main-abr-32 {
+    position: absolute;
+    top: 223px;
+    left: 248px;
+}
+
+.main-abr-64 {
+    position: absolute;
+    top: 223px;
+    left: 293px;
+}
+
+.main-abr-128 {
+    position: absolute;
+    top: 223px;
+    left: 336px;
+}
+.main-abr-128 .a {
+    letter-spacing: -6px;
+}
+.main-abr-128 .b {
+    letter-spacing: -5px;
+}
+
+.main-abr-192 {
+    position: absolute;
+    top: 223px;
+    left: 387px;
+}
+.main-abr-192 .a {
+    letter-spacing: -6px;
+}
+.main-abr-192 .b {
+    letter-spacing: -5px;
+}
+
+.main-abr-256 {
+    position: absolute;
+    top: 223px;
+    left: 442px;
+}
+
+.main-abr-320 {
+    position: absolute;
+    top: 223px;
+    left: 496px;
+}
+
+.main-cbr {
+    position: absolute;
+    top: 240px;
+    left: 9px;
+}
+
+.main-constant-bitrate {
+    position: absolute;
+    top: 240px;
+    left: 62px;
+}
+
+.main-cbr-32 {
+    position: absolute;
+    top: 240px;
+    left: 248px;
+}
+
+.main-cbr-64 {
+    position: absolute;
+    top: 240px;
+    left: 293px;
+}
+
+.main-cbr-128 {
+    position: absolute;
+    top: 240px;
+    left: 336px;
+}
+.main-cbr-128 .a {
+    letter-spacing: -6px;
+}
+.main-cbr-128 .b {
+    letter-spacing: -5px;
+}
+
+.main-cbr-192 {
+    position: absolute;
+    top: 240px;
+    left: 387px;
+}
+.main-cbr-192 .a {
+    letter-spacing: -6px;
+}
+.main-cbr-192 .b {
+    letter-spacing: -5px;
+}
+
+.main-cbr-256 {
+    position: absolute;
+    top: 240px;
+    left: 442px;
+}
+
+.main-cbr-320 {
+    position: absolute;
+    top: 240px;
+    left: 496px;
+}
+
+.main-save-button {
+    position: absolute;
+    top: 275px;
+    left: 8px;
+}
+
+.main-save {
+    position: absolute;
+    top: 273px;
+    left: 41px;
+}
+
+.main-status {
+    position: absolute;
+    top: 273px;
+    left: 106px;
+}
+.main-status .text {
+    color: #ff0000;
+}
+.main-status .please-wait {
+    color: #ff0000;
+    display: none;
+}
+
+.main-output-path {
+    position: absolute;
+    left: 106px;
+    top: 290px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 571px;
+    overflow: hidden;
+}
+
+.main-see-archive {
+    position: absolute;
+    top: 323px;
+    left: 10px;
+}
+
+.exit-1 {
+    display: none;
+}
+
+.exit-2 {
+    display: none;
+}

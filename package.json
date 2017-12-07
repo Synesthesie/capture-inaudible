@@ -1,0 +1,96 @@
+{
+  "name": "inaudible",
+  "version": "1.0.0",
+  "description": "capturing the inaudible",
+  "homepage": "http://www.matthieusaladin.org/",
+  "repository": "",
+  "author": {
+    "name": "Matthieu Saladin",
+    "email": "matthieu.saladin@gmail.com"
+  },
+  "license": "GPL-3.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build-darwin-x64": "build --mac",
+    "test-darwin-x64": "npm run build-darwin-x64 -- --dir",
+    "dist-darwin-x64": "npm run build-darwin-x64 && mv dist/Inaudible-1.0.0.dmg dist/Inaudible.dmg",
+    "build-win32-x64": "build --win",
+    "test-win32-x64": "npm run build-win32-x64 -- --dir",
+    "dist-win32-x64": "npm run build-win32-x64 && mv dist/Inaudible\\ Setup\\ 1.0.0.exe dist/Inaudible.exe",
+    "build-linux-x64": "build --linux",
+    "test-linux-x64": "npm run build-linux-x64 -- --dir",
+    "dist-linux-x64": "npm run build-linux-x64 && mv dist/inaudible-1.0.0-x86_64.AppImage dist/Inaudible.AppImage && cd dist && tar cvpzf Inaudible.tgz Inaudible.AppImage && rm Inaudible.AppImage"
+  },
+  "build": {
+    "appId": "org.matthieusaladin.inaudible",
+    "productName": "Inaudible",
+    "asar": true,
+    "files": [
+      "!vendor/bin",
+      "!gulpfile.js",
+      "!tern-project.js",
+      "!**/*.{swp}",
+      "!dev"
+    ],
+    "mac": {
+      "extraResources": [
+        {
+          "from": "vendor/bin/darwin-x64",
+          "to": "app/vendor/bin/darwin-x64"
+        }
+      ],
+      "target": {
+        "target": "dmg"
+      }
+    },
+    "win": {
+      "extraResources": [
+        {
+          "from": "vendor/bin/win32-x64",
+          "to": "app/vendor/bin/win32-x64"
+        }
+      ],
+      "target": {
+        "target": "nsis"
+      }
+    },
+    "linux": {
+      "extraResources": [
+        {
+          "from": "vendor/bin/linux-x64",
+          "to": "app/vendor/bin/linux-x64"
+        }
+      ],
+      "icon": "src/icons/",
+      "target": {
+        "target": "AppImage"
+      },
+      "category": "AudioVideo",
+      "executableName": "inaudible"
+    },
+    "dmg": {},
+    "nsis": {
+      "oneClick": false,
+      "uninstallDisplayName": "Inaudible"
+    },
+    "appImage": {
+        "systemIntegration": "doNotAsk"
+    }
+  },
+  "dependencies": {
+    "cp-file": "^4.2.0",
+    "ftp": "^0.3.10",
+    "jquery": "^3.2.1",
+    "mic": "github:ianisl/mic",
+    "temp": "^0.8.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "electron": "~1.6.2",
+    "electron-builder": "^19.27.7",
+    "electron-connect": "^0.6.2",
+    "gulp": "^3.9.1",
+    "gulp-shell": "^0.6.3"
+  }
+}
