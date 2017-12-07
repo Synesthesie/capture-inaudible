@@ -1,0 +1,9 @@
+.DS_STORE
+.tern-project
+npm-debug.log
+server-config.js
+*.swp
+node_modules/
+dev/interface-bg/
+vendor/fonts/
+dist/
