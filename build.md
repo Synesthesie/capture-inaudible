@@ -16,6 +16,7 @@ These commands are tested on macOS. Linux and Windows distributions can and shou
 - Package the app, create installers, rename (and compress if necessary): run `npm run dist-darwin-x64`, `npm run dist-win32-x64` or `npm run dist-linux-x64` depending on your platform.
 
 Note: on Linux, the .appImage file needs to be packaged inside a tarball to preserve permissions, otherwise it will be necessary to chmod +x the file before opening it.
+Note 2: Wine 2.0.x is required to build the Windows version on Linux or macOS.
 
 - Package the app without creating installers (for testing): run `npm run test-darwin-x64`, `npm run test-win32-x64` or `npm run test-linux-x64`.
 
@@ -35,4 +36,4 @@ Open the .dmg file and copy the app to the Applications folder.
 
 ### Linux
 
-Uncompress the .tgz file (using the command 'tar xzvf file.tgz') and run the .appImage. If the users refuses to integrate the app to the system, the app will simply launch.
+Uncompress the .tgz file (using the command 'tar xzvf file.tgz') and run the .appImage.

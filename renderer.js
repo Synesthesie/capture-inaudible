@@ -511,11 +511,14 @@ $('.main-save-button').click(function() {
                     let destSuffix = path.extname(filePath);
                     if (destSuffix !== '.wav' && destSuffix !== '.WAV' && destSuffix !== '.aif' && destSuffix !== '.AIF' && destSuffix !== '.aiff' && destSuffix !== '.AIFF') {
                         // If wrong or no extension is provided, set to wav
-                        filePath = path.basename(filePath, destSuffix) + '.wav';
+                        filePath = path.format({
+                            dir: path.dirname(filePath),
+                            base: path.basename(filePath, destSuffix) + '.wav'
+                        });
                         destSuffix = '.wav';
                     }
                     isProcessingFile = true;
-                    destPath = filePath; // Update with the name chose by the user
+                    destPath = filePath; // Update destPath to be able to account for the new name provided by the user
                     displayStatusText('processing file');
                     displayOutputPath(path.basename(destPath));
                     let pre; // Path to the most recent temp files created as part of the pre standardization process
